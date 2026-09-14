@@ -623,95 +623,43 @@
             margin-top: 1rem;
         }
 
-        .contact-form {
+        .contact-info {
             padding: 5rem 2rem;
             background: var(--off-white);
         }
 
-        .form-container {
-            max-width: 600px;
+        .contact-info-box {
+            max-width: 700px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 3rem;
             border-radius: 35px;
-            box-shadow: var(--shadow-light);
-            border: 1px solid var(--border-light);
-        }
-
-        .form-group {
-            margin-bottom: 1.8rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--primary-dark);
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem 1.2rem;
-            border-radius: 25px;
-            border: 1px solid var(--border-light);
-            background: var(--clean-white);
-            color: var(--text-dark);
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-terracotta);
-            box-shadow: 0 0 20px rgba(193, 105, 79, 0.08);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: var(--call-green);
-            color: white;
-            border: none;
-            padding: 1.2rem 2rem;
-            border-radius: 80px;
-            font-weight: 900;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 20px rgba(0, 168, 107, 0.3);
-        }
-
-        .submit-btn:hover {
-            background: #008f5a;
-            transform: scale(1.02);
-            box-shadow: 0 8px 35px rgba(0, 168, 107, 0.4);
-        }
-
-        .contact-info {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 30px;
             text-align: center;
-            margin-top: 2.5rem;
             border: 2px solid var(--accent-terracotta);
             box-shadow: var(--shadow-light);
         }
 
-        .contact-info i {
+        .contact-info-box i {
             color: var(--accent-terracotta);
             margin-left: 0.5rem;
         }
 
-        .contact-info strong {
+        .contact-info-box strong {
             color: var(--primary-dark);
+        }
+
+        .contact-info-box .big-phone {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--call-green);
+            display: block;
+            margin: 1.5rem 0;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .contact-info-box .big-phone:hover {
+            transform: scale(1.05);
         }
 
         .search-tags {
@@ -879,7 +827,7 @@
         <div class="hero-buttons">
             <button class="hero-btn secondary-btn" onclick="makePhoneCall('98849495')">
                 <i class="fas fa-phone-volume"></i>
-                اطلب استشارة مجانية
+                اتصل الآن
             </button>
         </div>
     </section>
@@ -979,34 +927,13 @@
         </div>
     </section>
 
-    <section class="contact-form" id="contact">
-        <h2 class="section-title">اطلب استشارة مجانية - معلم رخام وسيراميك 98849495</h2>
-        <div class="form-container">
-            <form id="contactForm">
-                <div class="form-group"><label for="name">الاسم الكامل</label><input type="text" id="name" placeholder="أدخل اسمك" required></div>
-                <div class="form-group"><label for="phone">رقم الهاتف</label><input type="tel" id="phone" placeholder="مثال: 51234567" required></div>
-                <div class="form-group"><label for="area">المنطقة (حولي، السالمية، الفروانية، الجهراء، الأحمدي، العاصمة)</label><input type="text" id="area" placeholder="حدد منطقتك" required></div>
-                <div class="form-group"><label for="service">نوع الخدمة المطلوبة</label>
-                    <select id="service">
-                        <option>تركيب رخام</option>
-                        <option>تركيب بورسلان</option>
-                        <option>تركيب سيراميك</option>
-                        <option>تكسير سيراميك</option>
-                        <option>تكسير ارضيات</option>
-                        <option>تجديد حمامات</option>
-                        <option>رخام درج</option>
-                        <option>فني سيراميك</option>
-                        <option>فني رخام</option>
-                    </select>
-                </div>
-                <div class="form-group"><label for="message">تفاصيل المشروع (المساحة، المواد المطلوبة)</label>
-                    <textarea id="message" placeholder="مثال: أرغب في تركيب رخام درج بمساحة 20 متر مع تركيب بورسلان أرضيات..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn"><i class="fas fa-headset"></i> احصل على استشارة مجانية</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <i class="fas fa-phone-alt"></i> <strong>رقم المعلم: 98849495</strong><br>
+    <section class="contact-info" id="contact">
+        <h2 class="section-title">تواصل معنا - معلم رخام وسيراميك 98849495</h2>
+        <div class="contact-info-box">
+            <i class="fas fa-phone-alt"></i> <strong>رقم المعلم: 98849495</strong>
+            <span class="big-phone" onclick="makePhoneCall('98849495')">
+                <i class="fas fa-phone-volume"></i> 98849495
+            </span>
             <i class="fas fa-map-marker-alt"></i> نغطي جميع مناطق الكويت: حولي، الفروانية، العاصمة، الجهراء، مبارك الكبير، الأحمدي، السالمية<br>
             <i class="fas fa-shield-alt"></i> معلم معتمد | ضمان الجودة | خدمة فورية | أسعار تنافسية
         </div>
@@ -1043,16 +970,5 @@
         <p>معلم معتمد - ضمان الجودة - أسعار مناسبة - تغطية جميع مناطق الكويت</p>
         <p>جميع الحقوق محفوظة © 2026 | معلم رخام وسيراميك - أفضل معلم في الكويت - رقم 98849495</p>
     </div>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (typeof gtag_report_conversion === 'function') {
-                gtag_report_conversion();
-            }
-            alert('شكراً لتواصلكم مع معلم الرخام والسيراميك! سيتم الاتصال بكم فوراً لتقديم استشارة مجانية.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
